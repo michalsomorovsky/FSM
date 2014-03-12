@@ -38,6 +38,15 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <commandLine>`pkg-config --cflags gtk+-3.0`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`pkg-config --cflags gtk+-3.0`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <commandLine>`pkg-config --libs gtk+-3.0</commandLine>
+        </linkerTool>
       </compileType>
       <item path="../../../Dropbox/Ams.seq" ex="false" tool="3" flavor2="0">
       </item>

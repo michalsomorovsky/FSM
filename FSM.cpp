@@ -8,8 +8,8 @@
 #include "FSM.h"
 #include <iostream>
 
-FSM::FSM() {
-    cout<<"LAMA\n";
+FSM::FSM(int num) {
+    stavy = new string[num];
 }
 
 FSM::FSM(const FSM& orig) {
@@ -18,3 +18,10 @@ FSM::FSM(const FSM& orig) {
 FSM::~FSM() {
 }
 
+void FSM::addState(string text)
+{
+    //cout<<text<<endl;
+    int i=0;
+    while(!stavy[i].empty()) i++;
+    stavy[i] = text;
+}

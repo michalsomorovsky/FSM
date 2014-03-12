@@ -40,11 +40,11 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=`pkg-config --cflags gtk+-3.0` 
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=`pkg-config --cflags gtk+-3.0` 
+CXXFLAGS=`pkg-config --cflags gtk+-3.0` 
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -61,7 +61,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fsmload.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fsmload ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/fsmload ${OBJECTFILES} ${LDLIBSOPTIONS} `pkg-config --libs gtk+-3.0
 
 ${OBJECTDIR}/FSM.o: FSM.cpp 
 	${MKDIR} -p ${OBJECTDIR}

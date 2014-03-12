@@ -10,13 +10,13 @@
 
 using namespace std;
 
-class FSM {
-    string stavy[];
-    
+class FSM { 
 public:
-    FSM();
+    string* stavy;
+    FSM(int num);
     FSM(const FSM& orig);
     virtual ~FSM();
+    void addState(string);
 private:
 
 };
